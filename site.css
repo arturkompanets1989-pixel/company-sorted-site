@@ -3,9 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 
 :root{
-  --полоса: 795px;        /* ширина страницы эталона */
-  --поля: 41.25px;        /* боковое поле */
-  --отступ-сверху: 58.31px;/* отступ от края полосы до эйтбрау, одинаков во всех блоках */
+  --полоса: 1192.5px;        /* ширина страницы эталона */
+  --поля: 61.88px;        /* боковое поле */
+  --отступ-сверху: 87.47px;/* отступ от края полосы до эйтбрау, одинаков во всех блоках */
 
   --фон-страницы:#f4f7f7;
   --фон-первый-экран:#0b2131;
@@ -38,9 +38,9 @@
 body{background:var(--фон-страницы);font-family:Inter,Arial,sans-serif;color:var(--текст);
   -webkit-font-smoothing:antialiased}
 .стр{width:var(--полоса);margin:0 auto;background:var(--фон-страницы)}
-@media (max-width:795px){
+@media (max-width:1240px){
   body{overflow-x:hidden}
-  .стр{width:795px;transform-origin:top left}
+  .стр{width:1192.5px;transform-origin:top left}
 }
 
 /* ---------- полосы ---------- */
@@ -49,79 +49,79 @@ body{background:var(--фон-страницы);font-family:Inter,Arial,sans-seri
 .блок--туман{background:var(--фон-туман)}
 .блок--глубокий{background:var(--фон-глубокий);color:var(--текст-на-тёмном)}
 .блок--лес{background:var(--фон-лес);color:var(--текст-на-тёмном)}
-.блок--первый{background:var(--фон-первый-экран);color:#fff;padding:47.97px var(--поля)}
+.блок--первый{background:var(--фон-первый-экран);color:#fff;padding:71.95px var(--поля)}
 
 /* ---------- шапка ---------- */
 .шапка{display:flex;justify-content:space-between;align-items:baseline}
-.знак{font-size:16.5px;font-weight:900;color:#fff;letter-spacing:-.2px}
+.знак{font-size:24.75px;font-weight:900;color:#fff;letter-spacing:-.2px}
 .знак span{font-weight:700;color:var(--зелёный-знак)}
-.знак-подпись{font-size:9.8px;color:#64768a}
+.знак-подпись{font-size:14.7px;color:#64768a}
 
 /* ---------- первый экран ---------- */
-.эйтбрау-тёмный{font-size:9.8px;font-weight:700;color:var(--зелёный-эйтбрау);
-  letter-spacing:.6px;text-transform:uppercase;margin-top:42.2px}
-.первый-заголовок{font-size:48px;font-weight:900;line-height:51.3px;color:#fff;margin-top:23.3px}
-.первый-текст{font-size:15.8px;line-height:23.6px;color:var(--текст-на-тёмном);margin-top:36.4px;max-width:560px}
-.цена-крупная{font-size:86.2px;font-weight:900;color:var(--зелёный-цена);line-height:1;margin-top:36.3px}
-.цена-рядом{font-size:14.2px;line-height:20.3px;color:var(--текст-на-тёмном-ярче)}
+.эйтбрау-тёмный{font-size:14.7px;font-weight:700;color:var(--зелёный-эйтбрау);
+  letter-spacing:.6px;text-transform:uppercase;margin-top:63.3px}
+.первый-заголовок{font-size:72px;font-weight:900;line-height:76.95px;color:#fff;margin-top:34.95px}
+.первый-текст{font-size:23.7px;line-height:35.4px;color:var(--текст-на-тёмном);margin-top:54.6px;max-width:840px}
+.цена-крупная{font-size:129.3px;font-weight:900;color:var(--зелёный-цена);line-height:1;margin-top:54.45px}
+.цена-рядом{font-size:21.3px;line-height:30.45px;color:var(--текст-на-тёмном-ярче)}
 .цена-рядом b{font-weight:700}
-.доказательства{display:flex;gap:11.25px;margin-top:48px}
-.доказательства div{font-size:10.5px;color:#e4f3f1;padding:11.25px 11.25px;border:.75px solid rgba(255,255,255,.18);
-  border-radius:3px;flex:1}
+.доказательства{display:flex;gap:16.88px;margin-top:72px}
+.доказательства div{font-size:15.75px;color:#e4f3f1;padding:16.88px 16.88px;border:.75px solid rgba(255,255,255,.18);
+  border-radius:4.5px;flex:1}
 
 /* ---------- заголовки блоков ---------- */
-.эйтбрау{font-size:9.8px;font-weight:700;color:var(--зелёный);letter-spacing:.6px;text-transform:uppercase}
+.эйтбрау{font-size:14.7px;font-weight:700;color:var(--зелёный);letter-spacing:.6px;text-transform:uppercase}
 .блок--глубокий .эйтбрау,.блок--лес .эйтбрау{color:var(--зелёный-эйтбрау)}
-.заголовок{font-size:29.2px;font-weight:900;line-height:33.6px;margin-top:17.3px;color:var(--текст)}
+.заголовок{font-size:43.8px;font-weight:900;line-height:50.4px;margin-top:25.95px;color:var(--текст)}
 .блок--глубокий .заголовок,.блок--лес .заголовок{color:#fff}
-.лид{font-size:14.2px;line-height:21.3px;color:var(--текст-тише);margin-top:17.3px;max-width:600px}
+.лид{font-size:21.3px;line-height:31.95px;color:var(--текст-тише);margin-top:25.95px;max-width:900px}
 .блок--глубокий .лид,.блок--лес .лид{color:var(--текст-на-тёмном)}
 
 /* ---------- карточки и сетки ---------- */
-.сетка-2{display:grid;grid-template-columns:1fr 1fr;gap:11.25px;margin-top:28.1px}
-.сетка-3{display:grid;grid-template-columns:repeat(3,1fr);gap:11.25px;margin-top:28.1px}
-.карточка{background:var(--фон-белый);border:.75px solid var(--линия);border-radius:6px;padding:16.9px}
+.сетка-2{display:grid;grid-template-columns:1fr 1fr;gap:16.88px;margin-top:42.15px}
+.сетка-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16.88px;margin-top:42.15px}
+.карточка{background:var(--фон-белый);border:.75px solid var(--линия);border-radius:9px;padding:25.35px}
 .карточка--зелёная{background:var(--плашка-зелёная);border-color:var(--плашка-зелёная-рамка)}
 .карточка--тревога{background:var(--плашка-тревога);border-color:var(--плашка-тревога-рамка)}
 .карточка--серая{background:var(--плашка-серая);border-color:var(--плашка-серая-рамка)}
-.номер{font-size:10.9px;font-weight:700;color:var(--зелёный)}
-.карточка-заголовок{font-size:12.8px;font-weight:700;line-height:17.3px;margin-top:6.8px}
-.карточка-текст{font-size:10.9px;line-height:15.8px;color:var(--текст-тише);margin-top:6.8px}
-.метка-включено{font-size:8.2px;font-weight:700;color:var(--зелёный);letter-spacing:.5px;
-  text-transform:uppercase;margin-top:11.25px;display:block}
+.номер{font-size:16.35px;font-weight:700;color:var(--зелёный)}
+.карточка-заголовок{font-size:19.2px;font-weight:700;line-height:25.95px;margin-top:10.2px}
+.карточка-текст{font-size:16.35px;line-height:23.7px;color:var(--текст-тише);margin-top:10.2px}
+.метка-включено{font-size:12.3px;font-weight:700;color:var(--зелёный);letter-spacing:.5px;
+  text-transform:uppercase;margin-top:16.88px;display:block}
 
 /* ---------- строки состава ---------- */
-.строка{display:flex;justify-content:space-between;align-items:flex-start;gap:16.9px;
-  padding:13.5px 0;border-bottom:.75px solid var(--линия)}
+.строка{display:flex;justify-content:space-between;align-items:flex-start;gap:25.35px;
+  padding:20.25px 0;border-bottom:.75px solid var(--линия)}
 .строка:last-child{border-bottom:0}
-.строка-название{font-size:12.8px;font-weight:700}
-.строка-текст{font-size:10.9px;line-height:15.8px;color:var(--текст-тише);margin-top:4.5px}
-.строка-цена{font-size:14.2px;font-weight:900;color:var(--текст);white-space:nowrap}
+.строка-название{font-size:19.2px;font-weight:700}
+.строка-текст{font-size:16.35px;line-height:23.7px;color:var(--текст-тише);margin-top:6.75px}
+.строка-цена{font-size:21.3px;font-weight:900;color:var(--текст);white-space:nowrap}
 
 /* ---------- цены года ---------- */
-.тариф{background:var(--фон-белый);border:.75px solid var(--линия);border-radius:6px;padding:22.5px}
-.тариф-цена{font-size:40.5px;font-weight:900;color:var(--текст);line-height:1}
-.тариф-цена span{font-size:14.2px;font-weight:700;color:var(--текст-серый)}
-.тариф-список{list-style:none;margin-top:16.9px}
-.тариф-список li{font-size:10.9px;line-height:18px;color:var(--текст-тише);padding-left:13.5px;position:relative}
+.тариф{background:var(--фон-белый);border:.75px solid var(--линия);border-radius:9px;padding:33.75px}
+.тариф-цена{font-size:60.75px;font-weight:900;color:var(--текст);line-height:1}
+.тариф-цена span{font-size:21.3px;font-weight:700;color:var(--текст-серый)}
+.тариф-список{list-style:none;margin-top:25.35px}
+.тариф-список li{font-size:16.35px;line-height:27px;color:var(--текст-тише);padding-left:20.25px;position:relative}
 .тариф-список li:before{content:"✓";position:absolute;left:0;color:var(--зелёный);font-weight:700}
 
 /* ---------- бесплатный шаг ---------- */
-.цена-зачёркнута{font-size:21.8px;font-weight:700;color:#7b9093;text-decoration:line-through}
-.цена-даром{font-size:49.5px;font-weight:900;color:var(--зелёный-цена);line-height:1}
+.цена-зачёркнута{font-size:32.7px;font-weight:700;color:#7b9093;text-decoration:line-through}
+.цена-даром{font-size:74.25px;font-weight:900;color:var(--зелёный-цена);line-height:1}
 .поле{display:block;width:100%;background:rgba(255,255,255,.07);border:.75px solid rgba(255,255,255,.22);
-  border-radius:4px;padding:11.25px;font:400 11.2px Inter,Arial,sans-serif;color:#fff;margin-top:9px}
-.кнопка{display:inline-block;background:var(--зелёный);color:#04231c;font:900 12.8px Inter,Arial,sans-serif;
-  letter-spacing:.4px;text-transform:uppercase;padding:14.6px 22.5px;border:0;border-radius:4px;
-  margin-top:16.9px;cursor:pointer;text-decoration:none}
+  border-radius:6px;padding:16.88px;font:400 16.8px Inter,Arial,sans-serif;color:#fff;margin-top:13.5px}
+.кнопка{display:inline-block;background:var(--зелёный);color:#04231c;font:900 19.2px Inter,Arial,sans-serif;
+  letter-spacing:.4px;text-transform:uppercase;padding:21.9px 33.75px;border:0;border-radius:6px;
+  margin-top:25.35px;cursor:pointer;text-decoration:none}
 
 /* ---------- мелкое ---------- */
-.сноска{font-size:9px;line-height:13.5px;color:var(--текст-серый);margin-top:16.9px}
+.сноска{font-size:13.5px;line-height:20.25px;color:var(--текст-серый);margin-top:25.35px}
 .блок--глубокий .сноска,.блок--лес .сноска{color:#8fa7a4}
-.подвал{background:var(--фон-подвал);color:#9fb3af;padding:27.46px var(--поля);font-size:9px;line-height:13.5px}
-.подвал-знак{font-size:9px;font-weight:900;color:#fff}
+.подвал{background:var(--фон-подвал);color:#9fb3af;padding:41.19px var(--поля);font-size:13.5px;line-height:20.25px}
+.подвал-знак{font-size:13.5px;font-weight:900;color:#fff}
 .полоса-сноски{background:var(--фон-сноски);border-top:.75px solid #d6e1e0;
-  padding:16.96px var(--поля);font-size:9px;line-height:13.5px;color:var(--текст-серый)}
+  padding:25.44px var(--поля);font-size:13.5px;line-height:20.25px;color:var(--текст-серый)}
 
 /* ---------- правки корня 25.10.2026 по двум дефектам, найденным окном двери 3 ---------- */
 /* 1. Карточка всегда с тёмным текстом, даже внутри тёмной полосы. */
@@ -133,50 +133,66 @@ body{background:var(--фон-страницы);font-family:Inter,Arial,sans-seri
 
 /* 2. Крупный итог цены в блоке состава — отдельный класс, а не самодельная карточка. */
 .итог{background:var(--плашка-зелёная);border:.75px solid var(--плашка-зелёная-рамка);
-  border-radius:6px;padding:22.5px;margin-top:11.25px;display:flex;
-  justify-content:space-between;align-items:center;gap:16.9px}
-.итог-подпись{font-size:12.8px;font-weight:700;color:var(--текст)}
-.итог-текст{font-size:10.9px;line-height:15.8px;color:var(--текст-тише);margin-top:4.5px}
-.итог-цена{font-size:40.5px;font-weight:900;color:var(--текст);line-height:1;white-space:nowrap}
+  border-radius:9px;padding:33.75px;margin-top:16.88px;display:flex;
+  justify-content:space-between;align-items:center;gap:25.35px}
+.итог-подпись{font-size:19.2px;font-weight:700;color:var(--текст)}
+.итог-текст{font-size:16.35px;line-height:23.7px;color:var(--текст-тише);margin-top:6.75px}
+.итог-цена{font-size:60.75px;font-weight:900;color:var(--текст);line-height:1;white-space:nowrap}
 
 /* 3. Подгонка под узкий экран делается файлом эталон.js, а не правкой размеров. */
 
 /* ---------- главная: пять квадратных кубиков ---------- */
-.кубики{display:grid;grid-template-columns:repeat(3,1fr);gap:11.25px;margin-top:36.3px}
+.кубики{display:grid;grid-template-columns:repeat(3,1fr);gap:16.88px;margin-top:54.45px}
 .кубик{position:relative;display:block;text-decoration:none;background:rgba(255,255,255,.055);
-  border:.75px solid rgba(255,255,255,.16);border-radius:6px;padding:22.5px 22.5px 56.25px;min-height:196px;
+  border:.75px solid rgba(255,255,255,.16);border-radius:9px;padding:33.75px 33.75px 84.38px;min-height:294px;
   color:#fff;transition:background .15s ease,border-color .15s ease}
 .кубик:hover{background:rgba(255,255,255,.1);border-color:var(--зелёный)}
-.кубик-номер{font-size:9.8px;font-weight:700;color:var(--зелёный-эйтбрау);letter-spacing:.6px}
-.кубик-заголовок{font-size:17.2px;font-weight:900;line-height:21.8px;margin-top:11.25px;color:#fff}
-.кубик-текст{font-size:10.9px;line-height:15.8px;color:var(--текст-на-тёмном);margin-top:9px}
-.кубик-цена{position:absolute;left:22.5px;bottom:22.5px;font-size:14.2px;font-weight:900;color:var(--зелёный-цена)}
-.кубик-стрелка{position:absolute;right:22.5px;bottom:22.5px;font-size:14.2px;color:var(--зелёный)}
+.кубик-номер{font-size:14.7px;font-weight:700;color:var(--зелёный-эйтбрау);letter-spacing:.6px}
+.кубик-заголовок{font-size:25.8px;font-weight:900;line-height:32.7px;margin-top:16.88px;color:#fff}
+.кубик-текст{font-size:16.35px;line-height:23.7px;color:var(--текст-на-тёмном);margin-top:13.5px}
+.кубик-цена{position:absolute;left:33.75px;bottom:33.75px;font-size:21.3px;font-weight:900;color:var(--зелёный-цена)}
+.кубик-стрелка{position:absolute;right:33.75px;bottom:33.75px;font-size:21.3px;color:var(--зелёный)}
 
 /* 4. Номер проблемы в блоке 02 — свой класс вместо инлайнового цвета. */
 .номер--тревога{color:#b4593f}
 
 /* ---------- главная: верхнее меню и первый экран в две колонки ---------- */
-.меню{display:flex;align-items:center;gap:22.5px;margin-top:22.5px;
-  padding-top:16.9px;border-top:.75px solid rgba(255,255,255,.12)}
-.меню a{font-size:11.2px;font-weight:700;color:#cfe1e5;text-decoration:none;letter-spacing:.2px}
+.меню{display:flex;align-items:center;gap:33.75px;margin-top:33.75px;
+  padding-top:25.35px;border-top:.75px solid rgba(255,255,255,.12)}
+.меню a{font-size:16.8px;font-weight:700;color:#cfe1e5;text-decoration:none;letter-spacing:.2px}
 .меню a:hover{color:#fff}
 .меню .вправо{margin-left:auto}
-.меню a.кнопка-меню{background:var(--зелёный);color:#04231c;padding:9px 16.9px;border-radius:4px;
-  font-weight:900;text-transform:uppercase;font-size:10.5px;letter-spacing:.4px}
-.герой{display:grid;grid-template-columns:1.15fr .85fr;gap:28.1px;align-items:start;margin-top:42.2px}
-.кнопки{display:flex;gap:11.25px;margin-top:28.1px}
-.кнопка-светлая{display:inline-block;background:#fff;color:#0b2131;font:900 12.8px Inter,Arial,sans-serif;
-  padding:14.6px 22.5px;border-radius:4px;text-decoration:none}
-.кнопка-пустая{display:inline-block;background:transparent;color:#fff;font:700 12.8px Inter,Arial,sans-serif;
-  padding:14.6px 22.5px;border-radius:4px;text-decoration:none;border:.75px solid rgba(255,255,255,.3)}
-.панель{background:rgba(255,255,255,.06);border:.75px solid rgba(255,255,255,.16);border-radius:8px;padding:22.5px}
-.панель-шапка{font-size:12.8px;font-weight:900;color:#fff}
-.панель-текст{font-size:10.9px;line-height:15.8px;color:var(--текст-на-тёмном);margin-top:6.8px}
-.дата-строка{display:flex;justify-content:space-between;gap:11.25px;padding:11.25px 0;
+.меню a.кнопка-меню{background:var(--зелёный);color:#04231c;padding:13.5px 25.35px;border-radius:6px;
+  font-weight:900;text-transform:uppercase;font-size:15.75px;letter-spacing:.4px}
+.герой{display:grid;grid-template-columns:1.15fr .85fr;gap:42.15px;align-items:start;margin-top:63.3px}
+.кнопки{display:flex;gap:16.88px;margin-top:42.15px}
+.кнопка-светлая{display:inline-block;background:#fff;color:#0b2131;font:900 19.2px Inter,Arial,sans-serif;
+  padding:21.9px 33.75px;border-radius:6px;text-decoration:none}
+.кнопка-пустая{display:inline-block;background:transparent;color:#fff;font:700 19.2px Inter,Arial,sans-serif;
+  padding:21.9px 33.75px;border-radius:6px;text-decoration:none;border:.75px solid rgba(255,255,255,.3)}
+.панель{background:rgba(255,255,255,.06);border:.75px solid rgba(255,255,255,.16);border-radius:12px;padding:33.75px}
+.панель-шапка{font-size:19.2px;font-weight:900;color:#fff}
+.панель-текст{font-size:16.35px;line-height:23.7px;color:var(--текст-на-тёмном);margin-top:10.2px}
+.дата-строка{display:flex;justify-content:space-between;gap:16.88px;padding:16.88px 0;
   border-bottom:.75px solid rgba(255,255,255,.1)}
 .дата-строка:last-of-type{border-bottom:0}
-.дата-название{font-size:10.9px;font-weight:700;color:#fff}
-.дата-источник{font-size:9px;color:#8fa7a4;margin-top:2.2px}
-.дата-срок{font-size:10.9px;font-weight:900;color:var(--зелёный-цена);white-space:nowrap}
-.панель .поле{margin-top:11.25px}
+.дата-название{font-size:16.35px;font-weight:700;color:#fff}
+.дата-источник{font-size:13.5px;color:#8fa7a4;margin-top:3.3px}
+.дата-срок{font-size:16.35px;font-weight:900;color:var(--зелёный-цена);white-space:nowrap}
+.панель .поле{margin-top:16.88px}
+
+
+/* ================= ШИРОКИЙ ЭКРАН — правка 27.10.2026 =================
+   Полосы растягиваются на всю ширину окна, содержимое стоит колонкой по центру.
+   Вся типографика выше увеличена в 1.5 раза от эталонной полосы 795px. */
+@media (min-width:1241px){
+  :root{--колонка:1192.5px}
+  .стр{width:100%;max-width:none}
+  .блок,.блок--первый,.подвал,.полоса-сноски{
+    padding-left:max(40px,calc((100% - var(--колонка))/2));
+    padding-right:max(40px,calc((100% - var(--колонка))/2));
+  }
+}
+@media (min-width:1700px){
+  :root{--колонка:1340px}
+}

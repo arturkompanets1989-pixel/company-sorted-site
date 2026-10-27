@@ -14,6 +14,10 @@ html,body{background:#f4f7f7}
 .page b{position:absolute;display:block;white-space:pre;line-height:0;font-weight:400;
  transform:translateY(0)}
 .wrap{overflow:hidden;width:100%}
+/* Широкий экран 27.10.2026: страница собрана как калька PDF шириной 795px,
+   растянуть её нельзя — увеличиваем целиком до той же колонки 1192.5px. */
+.page{zoom:1.5}
+@media (max-width:1240px){.page{zoom:1}}
 @media (max-width:795px){
  .page{transform-origin:top left}
 }
