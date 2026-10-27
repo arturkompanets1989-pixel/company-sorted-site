@@ -1,0 +1,10 @@
+/* Door A2 only: the second date field in the calculator sits one step below the first. */
+.calc__label--next{margin-top:var(--s-2)}
+
+/* Phone: each line of the open-years sheet stacks, so the long names keep the full width. */
+@media (max-width:599px){
+  .sheet--stack thead{display:none}
+  .sheet--stack tr{display:block; padding:var(--s-1) 0; border-bottom:var(--rule-hair) solid var(--color-rule)}
+  .sheet--stack td{display:block; border:0; padding:0}
+  .sheet--stack td + td{margin-top:var(--s-1)}
+}

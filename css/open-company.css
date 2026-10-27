@@ -1,0 +1,32 @@
+/* Door A5, opening a company from abroad. Only what site.css does not have; values from tokens.css. */
+
+/* annual upkeep: two tariffs, not three */
+.tiers--two{grid-template-columns:7fr 5fr}
+
+/* the free step: example request and the name form */
+.example{list-style:none; margin-top:var(--s-1)}
+.example li{
+  display:grid; grid-template-columns:var(--s-4) 1fr; gap:var(--s-1);
+  padding:var(--s-1) 0; border-bottom:var(--rule-hair) solid var(--color-rule);
+}
+.example li:last-child{border-bottom:0}
+.example .step__n{font-size:var(--fs-body)}
+.names{margin-top:var(--s-4)}
+.names__grid{display:grid; grid-template-columns:repeat(3,1fr); gap:var(--s-1)}
+.names__grid .input, .names__wide .input{width:100%; min-width:0}
+.names__wide{display:grid; grid-template-columns:2fr 1fr; gap:var(--s-1); margin-top:var(--s-2)}
+.names .actions{margin-top:var(--s-2)}
+.names__check{margin-top:var(--s-1); font-size:var(--fs-note); color:var(--color-ink)}
+.names-out{margin-top:var(--s-4)}
+
+/* the gift: $50 struck through, then the word Free */
+.gift{display:flex; align-items:baseline; gap:var(--s-2); flex-wrap:wrap; margin-top:var(--s-2)}
+.gift s{font:600 var(--fs-h2)/1 var(--font-display); text-decoration-thickness:3px}
+.gift strong{font:600 var(--fs-figure)/1 var(--font-display); letter-spacing:-.01em}
+
+@media (max-width:1023px){
+  .tiers--two{grid-template-columns:1fr}
+}
+@media (max-width:767px){
+  .names__grid, .names__wide{grid-template-columns:1fr}
+}

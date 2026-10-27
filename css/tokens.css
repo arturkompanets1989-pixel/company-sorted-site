@@ -1,0 +1,69 @@
+/* Company Sorted — web tokens.
+   Built from 20-САЙТ\DESIGN.md, block "Tokens". Do not edit by hand: change DESIGN.md first.
+   Brand source: 60-БРЕНД\ПРАВИЛА-ПРИМЕНЕНИЯ.md and бренд.css. Fonts: OFL 1.1, Google Fonts latin woff2 as published, source and licences in fonts\ШРИФТЫ-ЛИЦЕНЗИИ.md. */
+
+@font-face{font-family:"CS Serif";font-weight:400;font-style:normal;font-display:swap;
+  src:url("../fonts/source-serif-4-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"CS Serif";font-weight:600;font-style:normal;font-display:swap;
+  src:url("../fonts/source-serif-4-latin-600-normal.woff2") format("woff2")}
+@font-face{font-family:"CS Sans";font-weight:400;font-style:normal;font-display:swap;
+  src:url("../fonts/ibm-plex-sans-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"CS Sans";font-weight:500;font-style:normal;font-display:swap;
+  src:url("../fonts/ibm-plex-sans-latin-500-normal.woff2") format("woff2")}
+@font-face{font-family:"CS Sans";font-weight:600;font-style:normal;font-display:swap;
+  src:url("../fonts/ibm-plex-sans-latin-600-normal.woff2") format("woff2")}
+
+:root{
+  /* colour: four brand values; tints are midnight at lower strength */
+  --color-paper:#F2F7F7;
+  --color-paper-2:#E9EEEE;
+  --color-ink:#07161C;
+  --color-ink-2:rgba(7,22,28,.74);
+  --color-muted:rgba(7,22,28,.62);
+  --color-rule:rgba(7,22,28,.12);
+  --color-accent:#2FD4A0;
+  --color-accent-deep:#0B6B52;
+  --color-accent-ink:#042017;
+  --color-on-ink:#F2F7F7;
+  --color-on-ink-2:rgba(242,247,247,.74);
+  --color-on-ink-rule:rgba(242,247,247,.24);
+  --color-focus:#0B6B52;
+  --color-focus-on-ink:#2FD4A0;
+  /* the one gradient on the site (root, 28.10): midnight scrim under text on the photo.
+     Bottom 55% carries the headline; a lighter band at the top keeps the header row legible. */
+  --scrim:linear-gradient(to bottom, rgba(7,22,28,.5) 0, rgba(7,22,28,0) 144px, rgba(7,22,28,0) 45%, rgba(7,22,28,.72) 80%, rgba(7,22,28,.72) 100%);
+
+  /* type: fluid from 375 to 1440, value = min at 375, max at 1440 */
+  --font-display:"CS Serif", Georgia, serif;
+  --font-body:"CS Sans", "Segoe UI", Arial, sans-serif;
+  --fs-h1:clamp(40px, 27.3px + 3.38vw, 76px);
+  --fs-h2:clamp(30px, 23.7px + 1.69vw, 48px);
+  --fs-h3:clamp(22px, 19.9px + .56vw, 28px);
+  --fs-figure:clamp(56px, 39.1px + 4.51vw, 104px);
+  --fs-lead:clamp(19px, 17.6px + .38vw, 23px);
+  --fs-body:clamp(17px, 16.3px + .19vw, 19px);
+  --fs-label:15px;
+  --fs-note:14px;
+  --fs-floor:13px;
+
+  /* space: unit 24, steps 12 · 24 · 48 · 72 · 96 · 144 */
+  --s-1:12px; --s-2:24px; --s-4:48px; --s-6:72px; --s-8:96px; --s-12:144px;
+  --gutter:16px;
+  --content:1200px;
+  --wide:1440px;
+
+  /* shape */
+  --radius-card:0; --radius-control:2px;
+  --rule-hair:1px; --rule-strong:4px;
+  --shadow-card:none;
+  --mint-strip:4px;
+  --control-h:52px;
+
+  /* motion: still */
+  --ease:cubic-bezier(.2,0,0,1);
+  --dur:150ms;
+}
+@media (min-width:768px){:root{--gutter:24px}}
+@media (min-width:1440px){:root{--gutter:48px}}
+@media (max-width:767px){:root{--control-h:48px}}
+@media (prefers-reduced-motion:reduce){:root{--dur:0ms}}

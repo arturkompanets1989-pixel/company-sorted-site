@@ -1,0 +1,21 @@
+/* Door A4 only: additions on top of site.css. Values come from tokens.css only. */
+
+/* the free step: "$50 struck through, Free" in the display serif, no badge, no timer */
+.free{display:flex; align-items:baseline; gap:var(--s-1); margin-top:var(--s-2); font:600 var(--fs-h3)/1.2 var(--font-display)}
+.free s{color:var(--color-muted); text-decoration-thickness:2px}
+.free__now{color:var(--color-accent-deep)}
+
+/* second, optional field of the calculator */
+.calc__field + .calc__field{margin-top:var(--s-2)}
+.input--wide{width:100%}
+
+/* the first-year sheet on a phone: each row as a block, so long names and sources never widen the page */
+#sheet .split > *{min-width:0}
+@media (max-width:599px){
+  .sheet .table thead{display:none}
+  .sheet .table tr{display:block; padding:var(--s-1) 0; border-bottom:var(--rule-hair) solid var(--color-rule)}
+  .sheet .table td{display:block; border:0; padding:0}
+  .sheet .table td:nth-child(2){font:600 var(--fs-body)/1.4 var(--font-display); font-variant-numeric:lining-nums tabular-nums}
+}
+/* a date keeps to one line where the table has columns */
+@media (min-width:600px){ .sheet .table td:nth-child(2){white-space:nowrap} }

@@ -1,0 +1,10 @@
+/* Door A1 only: the struck-through price of the free step. Values from tokens.css. */
+.land-free{margin-top:var(--s-4)}
+.land-free s{text-decoration-thickness:1px}
+/* the land dates table on phones: each row stacks, what / when / source */
+@media (max-width:599px){
+  #sheet-out thead{display:none}
+  #sheet-out tr{display:block; padding:var(--s-1) 0; border-bottom:var(--rule-hair) solid var(--color-rule)}
+  #sheet-out td{display:block; border:0; padding:0}
+  #sheet-out td:first-child{font-weight:500}
+}
