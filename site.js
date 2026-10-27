@@ -1,5 +1,5 @@
 /* Подгонка полосы 795px под узкий экран. Подключать на каждой странице двери
-   строкой <script src="../22-ЭТАЛОН-ЛЕНДИНГА/эталон.js" defer></script> */
+   строкой <script src="эталон.js" defer></script> */
 (function () {
   function fit() {
     var p = document.querySelector(".стр");
