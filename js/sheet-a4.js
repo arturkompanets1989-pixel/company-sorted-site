@@ -36,7 +36,7 @@
     /* [Ф-170] certificate assumed issued on the opening date */
     row('Food premises certificate: renewal application, if issued on your date', fmt(addMonths(d,21)), 'Food (Registration of Premises) Regulations 2019');
     /* [Ф-172] */
-    row('Council trade licence: one year, if issued on your date', fmt(addMonths(d,12)), 'Pradeshiya Sabhas Act, ss. 147, 149');
+    row('Council trade licence', 'Renewed every year; your council sets the renewal date', 'Pradeshiya Sabhas Act, ss. 147, 149');
     /* [Ф-31, Ф-33, Ф-32]: the year of assessment that holds the date ends on 31 March */
     var endY=d.getMonth()>=3?d.getFullYear()+1:d.getFullYear();
     row('First year of assessment ends', fmt(new Date(endY,2,31)), 'IRD tax calendar 2026');

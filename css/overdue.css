@@ -8,3 +8,5 @@
   .sheet--stack td{display:block; border:0; padding:0}
   .sheet--stack td + td{margin-top:var(--s-1)}
 }
+/* the first-screen line in place of a price, until the price is decided (root, 29.10) */
+.door-hero__bill{font:600 var(--fs-h2)/1.12 var(--font-display); letter-spacing:-.01em; text-wrap:balance}

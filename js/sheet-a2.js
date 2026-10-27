@@ -11,7 +11,7 @@
    - beneficial ownership details of an existing company: 21 October 2026, Registrar's notice 30.09.2026 [Ф-43]
    - year of assessment 1 April to 31 March [Ф-31]; income tax return by 30 November after it,
      IRD tax calendar 2026 [Ф-32]
-   - $150 per year reviewed: 50-ДЕНЬГИ, status not decided, shown as a proposed price;
+   - our price per open year is NOT printed: in conflict in 50-ДЕНЬГИ, Р-45.7 (root, 29.10)
      multiplication shown next to the sum (root rule 25.10.2026) */
 (function(){
   var form=document.getElementById('calc'); if(!form) return;
@@ -71,9 +71,9 @@
       else { row(name,'Next one',fmt(tax),'IRD tax calendar 2026'); break; }
     }
 
-    // Our price for the years found: $150 x years, proposed (50-ДЕНЬГИ)
+    // No price here until Artur decides (Р-45.7): only the count of open years
     sum.textContent = late
-      ? late+(late===1?' annual return looks':' annual returns look')+' late from your date. Reviewing '+(late===1?'it':'them')+': '+late+' × $150 = $'+(late*150)+'. Proposed price, confirmed in your written quote. Tax returns are not counted here: only Inland Revenue knows whether they were filed.'
+      ? late+(late===1?' annual return looks':' annual returns look')+' late from your date. Our price is named in your written quote, from the number of open years, before any work starts. Tax returns are not counted here: only Inland Revenue knows whether they were filed.'
       : 'No annual return looks late from your date. Tax returns and beneficial ownership forms are checked separately.';
     out.hidden=false;
     if(wa) wa.href='https://wa.me/94701698954?text='+encodeURIComponent('Please send me the sheet of open years for my company. '+(filed?'Last annual return filed: ':'Incorporated, no annual return filed: ')+fmt(start)+'.');

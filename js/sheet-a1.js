@@ -4,7 +4,7 @@
      commencing from the date of the registration of the relevant deed of transfer", Act 38 of 2014, s. 4(4)(a) [Ф-155, Ф-109]
    - foreign share below 50% for twenty consecutive years from the transfer; above it, six months to restore,
      Act 38 of 2014, s. 2(2) [Ф-82, Ф-81]
-   - no mortgage of the land or the lease to a bank for five years from execution of the instrument,
+   - the operating company's lease cannot be mortgaged to a licensed bank for five years from signing of the lease,
      Act 38 of 2014, s. 11 [Ф-159а]; execution comes before registration, so the date shown is the latest possible end
    - any share transfer: form BO 3 within 20 working days; form BO 4 every year with each company's annual return,
      beneficial ownership regulations 09.10.2026 [Ф-108] */
@@ -31,7 +31,7 @@
       row('Six-monthly letter to the Registrar of Lands', 'Once between '+fmt(from)+' and '+fmt(to), 'Act 38 of 2014, s. 4(4)(a)');
     }
     // five years without a bank mortgage [Ф-159а]
-    row('No mortgage of the land or the lease to a bank', 'Until '+fmt(addMonths(deed,60))+' at the latest', 'Act 38 of 2014, s. 11');
+    row('No bank mortgage of your company\u2019s lease, if the lease is signed on your date', 'Until '+fmt(addMonths(deed,60)), 'Act 38 of 2014, s. 11');
     // twenty years below 50% [Ф-82]
     row('Foreign share stays below 50%', 'Until '+fmt(addMonths(deed,240)), 'Act 38 of 2014, s. 2(2)(a)');
     row('If the foreign share reaches 50%', 'Six months to bring it back below half', 'Act 38 of 2014, s. 2(2), proviso');
