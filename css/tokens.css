@@ -30,8 +30,10 @@
   --color-focus:#0B6B52;
   --color-focus-on-ink:#2FD4A0;
   /* the one gradient on the site (root, 28.10): midnight scrim under text on the photo.
-     Bottom 55% carries the headline; a lighter band at the top keeps the header row legible. */
-  --scrim:linear-gradient(to bottom, rgba(7,22,28,.5) 0, rgba(7,22,28,0) 144px, rgba(7,22,28,0) 45%, rgba(7,22,28,.72) 80%, rgba(7,22,28,.72) 100%);
+     The lower half carries the headline; a lighter band at the top keeps the header row legible. */
+  --scrim:linear-gradient(to bottom, rgba(7,22,28,.5) 0, rgba(7,22,28,0) 144px, rgba(7,22,28,0) 30%, rgba(7,22,28,.72) 50%, rgba(7,22,28,.72) 100%);
+  /* 29.10: the ramp now ends at 50%, not 80%: measured on the photo pixels, the headline crossed light areas
+     at 1.5:1 (needs 3:1); now 3.5–8.6:1 at 375–1920. Same colour, same 72% ceiling. */
 
   /* type: fluid from 375 to 1440, value = min at 375, max at 1440 */
   --font-display:"CS Serif", Georgia, serif;

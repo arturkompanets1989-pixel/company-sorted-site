@@ -17,9 +17,15 @@
 <section class="hero on-ink">
   <div class="hero__top">
     <div class="hero__photo">
-      <img src="img/hero-a-2400.jpg"
-           srcset="img/hero-a-1200.jpg 1200w, img/hero-a-2400.jpg 2400w"
-           sizes="100vw" width="2400" height="1600" alt="" fetchpriority="high">
+      <!-- below 1024 px the photo is cropped to the height of the headline block, so it is drawn wider than the screen: sizes says so -->
+      <picture>
+        <source type="image/webp"
+                srcset="img/hero-a-800.webp 800w, img/hero-a-1200.webp 1200w, img/hero-a-1600.webp 1600w, img/hero-a-2400.webp 2400w, img/hero-a-3200.webp 3200w"
+                sizes="(max-width: 599px) 225vw, (max-width: 1023px) 150vw, 100vw">
+        <img src="img/hero-a-2400.jpg"
+             srcset="img/hero-a-1200.jpg 1200w, img/hero-a-2400.jpg 2400w"
+             sizes="(max-width: 599px) 225vw, (max-width: 1023px) 150vw, 100vw" width="2400" height="1600" alt="" fetchpriority="high">
+      </picture>
     </div>
 
     <header class="bar">
