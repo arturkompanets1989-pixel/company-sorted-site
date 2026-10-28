@@ -13,11 +13,11 @@
                no statement of estimated tax from Y/A 2026/27, Act No. 11 of 2026 s. 17 [Ф-236а]
    If it applies: APIT by the 15th, annual statement 30 April [Ф-37]; EPF and ETF last working day of the
                next month [Ф-40, Ф-41]; VAT payment by the 20th, return by the last day of the month after the period [Ф-36]
-   Beneficial ownership: no dates until Gazette 2511/47 of 21.10.2026 is read (root, 29.10). */
+   Beneficial ownership: no dates until the official gazette is read (root, 29.10). */
 (function(){
   var M=['January','February','March','April','May','June','July','August','September','October','November','December'];
   var WA='https://wa.me/94701698954';
-  var BO='Beneficial ownership filing dates and penalties were revised on 22 October 2026 (Gazette 2511/47); we confirm them from the gazette before they go into your calendar.';
+  var BO='We confirm the current beneficial ownership deadlines from the official gazette before we put them in your calendar.';
 
   var DOORS={
     a3:{name:'You need an accountant who answers', label:'Your last annual general meeting, or the written resolution that replaced it',
