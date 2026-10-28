@@ -118,6 +118,7 @@ a{color:inherit}
   display:grid; grid-template-columns:4fr 8fr; gap:var(--s-4) var(--s-8);
   align-items:start;
 }
+.split > *{min-width:0} /* a wide table scrolls inside its column instead of widening the page */
 .h2{font:600 var(--fs-h2)/1.12 var(--font-display); letter-spacing:-.01em; text-wrap:balance}
 .h3{font:600 var(--fs-h3)/1.2 var(--font-display)}
 .lead{margin-top:var(--s-2); font-size:var(--fs-lead); line-height:1.45; color:var(--color-ink-2); max-width:44ch}

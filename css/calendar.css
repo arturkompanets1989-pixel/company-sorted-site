@@ -1,0 +1,31 @@
+/* Your company's calendar (js/calendar.js). Values from tokens.css only. */
+.cal__switch{display:flex; flex-wrap:wrap; gap:var(--s-1); margin-bottom:var(--s-2)}
+.cal__opt{
+  min-height:var(--control-h); padding:0 var(--s-2); border-radius:var(--radius-control);
+  background:transparent; color:var(--color-ink); border:1.5px solid var(--color-ink);
+  font:500 16px/1.2 var(--font-body); text-align:left; cursor:pointer;
+  transition:background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.cal__opt:hover{background:var(--color-paper-2)}
+.cal__opt[aria-pressed="true"]{background:var(--color-ink); color:var(--color-on-ink)}
+.cal__out{margin-top:var(--s-4); border-top:var(--rule-strong) solid var(--color-accent); padding-top:var(--s-2)}
+.cal__title:focus{outline:0}
+.cal__out > .note{margin-top:var(--s-1)}
+.cal__wrap{margin-top:var(--s-4); overflow-x:auto}
+.cal__table{min-width:30em; font-size:var(--fs-note)}
+.cal__table td:first-child{white-space:normal; min-width:9em; font-variant-numeric:lining-nums tabular-nums}
+.cal__line{margin-top:var(--s-4); padding:var(--s-2); background:var(--color-paper-2); border-left:var(--rule-strong) solid var(--color-accent-deep)}
+.cal__line p + p{margin-top:var(--s-1)}
+.cal__wa{margin-top:var(--s-1)}
+.cal-page{padding-top:var(--s-6)}
+.cal-page .door-hero__title{max-width:20ch}
+.cal-page__tool{max-width:56em; margin-top:var(--s-6)}
+.cal__form .calc__label--next{margin-top:var(--s-2)}
+@media (max-width:599px){
+  /* phones: each row stacks, so nothing hides behind a sideways scroll */
+  .cal__table{min-width:0}
+  .cal__table thead{position:absolute; left:-9999px}
+  .cal__table tr{display:block; padding:var(--s-1) 0; border-bottom:var(--rule-hair) solid var(--color-rule)}
+  .cal__table td{display:block; border:0; padding:0}
+  .cal__table td:first-child{font-weight:600; min-width:0}
+}

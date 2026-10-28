@@ -10,6 +10,7 @@
 <link rel="preload" href="fonts/source-serif-4-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/calendar.css">
 </head>
 <body class="page-door">
 <a class="skip" href="#main">Skip to content</a>
@@ -225,22 +226,7 @@
         <p class="lead">Your company&rsquo;s year counts from one date: your last annual general meeting.</p>
       </div>
       <div class="split__body">
-        <form class="calc" id="calc" novalidate>
-          <label class="calc__label" for="agm">Date of your last annual general meeting</label>
-          <div class="calc__row">
-            <input class="input" type="date" id="agm" name="agm" required>
-            <button class="btn btn--primary" type="submit">Show my dates</button>
-          </div>
-          <p class="note">Do not know the date? That is the first finding. Write to us and we start by finding it.</p>
-        </form>
-        <div class="sheet" id="sheet-out" hidden>
-          <table class="table">
-            <caption class="label">Your deadline sheet, counted from your date</caption>
-            <thead><tr><th scope="col">What</th><th scope="col">By</th><th scope="col">Source</th></tr></thead>
-            <tbody id="sheet-rows"></tbody>
-          </table>
-          <p class="note">Working days counted Monday to Friday; a public holiday moves a date later, never earlier. This is a calculation from your date, not a check of your company with the Registrar. The meeting date is also capped at six months after your balance sheet date, if that comes earlier (Companies Act, s.&nbsp;133(1)). Tax dates assume the standard 1 April to 31 March year of assessment.</p>
-        </div>
+        <div data-calendar data-door="a3"></div>
       </div>
     </div>
   </section>
@@ -277,6 +263,6 @@
 
 <script src="js/ref.js"></script>
 <script src="js/menu.js"></script>
-<script src="js/sheet-a3.js"></script>
+<script src="js/calendar.js"></script>
 </body>
 </html>

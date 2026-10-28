@@ -10,6 +10,7 @@
 <link rel="preload" href="fonts/source-serif-4-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/calendar.css">
 <link rel="stylesheet" href="css/overdue.css">
 </head>
 <body class="page-door">
@@ -227,27 +228,7 @@
         <p class="lead">Your company&rsquo;s calendar counts from one date: the last annual return actually filed.</p>
       </div>
       <div class="split__body">
-        <form class="calc" id="calc" novalidate>
-          <label class="calc__label" for="agm">Date your last annual return was filed</label>
-          <div class="calc__row">
-            <input class="input" type="date" id="agm" name="agm" min="2008-01-01">
-          </div>
-          <label class="calc__label calc__label--next" for="inc">No return ever filed? Date of incorporation instead</label>
-          <div class="calc__row">
-            <input class="input" type="date" id="inc" name="inc" min="2008-01-01">
-            <button class="btn btn--primary" type="submit">Show my open years</button>
-          </div>
-          <p class="note" id="calc-msg">Do not know either date? That is the first finding. Write to us and we start by finding it.</p>
-        </form>
-        <div class="sheet" id="sheet-out" hidden>
-          <table class="table sheet--stack">
-            <caption class="label">Your open years, counted from your date</caption>
-            <thead><tr><th scope="col">What</th><th scope="col">By</th><th scope="col">Source</th></tr></thead>
-            <tbody id="sheet-rows"></tbody>
-          </table>
-          <p class="note note--rule" id="sheet-sum"></p>
-          <p class="note">This is a calculation from your date, not a check of your company with the Registrar or Inland Revenue. The meeting date is also capped at six months after your balance sheet date, if that comes earlier (Companies Act, s.&nbsp;133(1)). Tax dates assume the standard 1 April to 31 March year of assessment. Beyond that: what was actually filed is the first thing we find out. The meeting behind your last return may have been held in the year before; if so, add one more year. Working days counted Monday to Friday; a public holiday moves a date later. Sums the Registrar may set for late filing are not in this sheet: nobody knows them in advance.</p>
-        </div>
+        <div data-calendar data-door="a2"></div>
       </div>
     </div>
   </section>
@@ -284,6 +265,6 @@
 
 <script src="js/ref.js"></script>
 <script src="js/menu.js"></script>
-<script src="js/sheet-a2.js"></script>
+<script src="js/calendar.js"></script>
 </body>
 </html>
