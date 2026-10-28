@@ -36,8 +36,8 @@
     row('Foreign share stays below 50%', 'Until '+fmt(addMonths(deed,240)), 'Act 38 of 2014, s. 2(2)(a)');
     row('If the foreign share reaches 50%', 'Six months to bring it back below half', 'Act 38 of 2014, s. 2(2), proviso');
     // beneficial ownership [Ф-108]
-    row('Any transfer of shares: form BO 3', 'Within 20 working days of the transfer', 'BO regulations, 09.10.2026');
-    row('Form BO 4 for each company', 'Every year, with its annual return', 'BO regulations, 09.10.2026');
+    // no beneficial ownership dates until the official gazette is read (root, 29.10)
+    row('Beneficial ownership forms for each company', 'We confirm the current deadlines from the official gazette before we put them in your calendar', 'Official gazette');
     out.hidden=false;
     if(wa) wa.href='https://wa.me/94701698954?text='+encodeURIComponent('Please send me the dates for my land structure. Deed of transfer registered (or planned): '+fmt(deed)+'.');
   });

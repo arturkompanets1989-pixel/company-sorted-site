@@ -2,7 +2,9 @@
    Template: 25-КОНТЕНТ\ДОКУМЕНТЫ-КЛИЕНТУ\КАЛЕНДАРЬ-EN.html. Dates only from 01-ФАКТЫ\КАЛЕНДАРЬ-СРОКОВ;
    the registry line of every rule is in brackets here and never shown on the page.
    Registrar:  no annual return in the year of registration, s. 131(3) [Ф-16]
-               first annual general meeting within 18 months of registration, s. 133(2) [Ф-16]
+               first annual general meeting within 18 months of registration, s. 133(2) [Ф-16]; by the letter of
+               s. 133(1) already in the next calendar year, the earlier date shown with a caveat [Ф-250]
+   Inland Revenue registration of a new company within 30 days, IRA s. 102(1A) [Ф-237, Ф-178а]
                a meeting once each calendar year, no later than 15 months after the last one and
                6 months after the balance date, s. 133(1) [Ф-16]
                annual return within 30 working days of the meeting, at least one every year, s. 131(1)-(2) [Ф-16, Ф-163]
@@ -69,8 +71,14 @@
     }
     if(door==='a5'){
       r.push([String(d.getFullYear()),'Year of registration: no annual return','Companies Act, s. 131(3)']);
-      var agm=addMonths(d,18);
-      r.push(['By '+fmt(agm),'First annual general meeting','Companies Act, s. 133(2)']);
+      /* [Ф-237, Ф-178а] tax registration within 30 days of incorporation, IRA s. 102(1A) */
+      var tin=new Date(d); tin.setDate(tin.getDate()+30);
+      r.push(['By '+fmt(tin),'Registration of the company with Inland Revenue, for its tax number','Inland Revenue Act, s. 102(1A)']);
+      /* [Ф-250] first meeting: not in the year of registration, within 18 months (s. 133(2)); by the letter of
+         s. 133(1) already in the next calendar year. The link between the two is our reading, so the earlier
+         date is shown, with the caveat */
+      var m18=addMonths(d,18), nextYearEnd=new Date(d.getFullYear()+1,11,31), agm=m18<nextYearEnd?m18:nextYearEnd;
+      r.push(['By '+fmt(agm)+', or 6 months after your balance date if earlier','First annual general meeting: none in the year of registration, then within 18 months; read with the rule of one meeting in each calendar year, the earlier date applies','Companies Act, s. 133(1)–(2)']);
       r.push(['Within 30 working days of that meeting; at the latest '+fmt(addWorkingDays(agm,30)),'First annual return','Companies Act, s. 131(2)']);
       if(arrive) r.push([fmtM(arrive),'You arrive: the bank account is opened in person','Bank’s own rules']);
     }
