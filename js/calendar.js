@@ -4,18 +4,20 @@
    Registrar:  no annual return in the year of registration, s. 131(3) [Ф-16]
                first annual general meeting within 18 months of registration, s. 133(2) [Ф-16]; by the letter of
                s. 133(1) already in the next calendar year, the earlier date shown with a caveat [Ф-250]
-   Inland Revenue registration of a new company within 30 days, IRA s. 102(1A) [Ф-237, Ф-178а]
                a meeting once each calendar year, no later than 15 months after the last one and
                6 months after the balance date, s. 133(1) [Ф-16]
                annual return within 30 working days of the meeting, at least one every year, s. 131(1)-(2) [Ф-16, Ф-163]
                financial statements within 6 months after the balance date, s. 150(1) [Ф-149]
                change of directors or secretary within 20 working days, s. 223 [Ф-62]
-   Inland Revenue: year of assessment 1 April - 31 March [Ф-31]; instalments 15 August, 15 November,
-               15 February, 15 May, s. 90 [Ф-34]; final payment 30 September [Ф-33]; return 30 November, s. 93(1) [Ф-32]
-               no statement of estimated tax from Y/A 2026/27, Act No. 11 of 2026 s. 17 [Ф-236а]
+   Inland Revenue: registration of a new company within 30 days, s. 102(1A) [Ф-237, Ф-178а];
+               year of assessment 1 April - 31 March [Ф-31]; instalments 15 August, 15 November,
+               15 February, 15 May, s. 90 [Ф-34]; final payment 30 September, s. 82(2)(c)(ii) [Ф-33а];
+               return 30 November, s. 93(1) [Ф-32]; no statement of estimated tax [Ф-236а]
+   Working days: Monday to Friday; a public holiday moves a date later, s. 529 [Ф-251], so a computed date is the earliest.
+   Bank account opened in person [Ф-184а].
    If it applies: APIT by the 15th, annual statement 30 April [Ф-37]; EPF and ETF last working day of the
                next month [Ф-40, Ф-41]; VAT payment by the 20th, return by the last day of the month after the period [Ф-36]
-   Beneficial ownership: no dates until the official gazette is read (root, 29.10). */
+   Beneficial ownership: no dates until the official gazette is read. */
 (function(){
   var M=['January','February','March','April','May','June','July','August','September','October','November','December'];
   var WA='https://wa.me/94701698954';
@@ -46,7 +48,7 @@
       rows.push([new Date(k,10,15),'2nd instalment of income tax, '+ya(k)+'*','Inland Revenue Act, s. 90']);
       rows.push([new Date(k,1,15),'3rd instalment of income tax, '+ya(k-1)+'*','Inland Revenue Act, s. 90']);
       rows.push([new Date(k,4,15),'4th instalment of income tax, '+ya(k-1)+'*','Inland Revenue Act, s. 90']);
-      rows.push([new Date(k,8,30),'Final payment of income tax, '+ya(k-1),'IRD tax calendar 2026']);
+      rows.push([new Date(k,8,30),'Final payment of income tax, '+ya(k-1),'Inland Revenue Act, s. 82(2)(c)(ii)']);
       rows.push([new Date(k,10,30),'Income tax return, '+ya(k-1)+', also with no income','Inland Revenue Act, s. 93(1)']);
     }
     var end=addMonths(today,12);
@@ -57,7 +59,7 @@
   function registrarRows(door,d,arrive,today){
     var r=[];
     if(door==='a3'){
-      r.push([fmt(addWorkingDays(d,30)),'Annual return for that meeting, signed by a director and the secretary','Companies Act, s. 131(2)']);
+      r.push(['About '+fmt(addWorkingDays(d,30))+', or later with public holidays','Annual return for that meeting, signed by a director and the secretary','Companies Act, s. 131(2)']);
       var cap=addMonths(d,15),endNext=new Date(d.getFullYear()+1,11,31);
       r.push(['By '+fmt(cap<endNext?cap:endNext)+', or 6 months after your balance date if earlier','Next annual general meeting, or a written resolution in its place','Companies Act, ss. 133(1), 144']);
       r.push(['Within 6 months after your balance date','Financial statements, signed','Companies Act, s. 150(1)']);
@@ -78,8 +80,8 @@
          s. 133(1) already in the next calendar year. The link between the two is our reading, so the earlier
          date is shown, with the caveat */
       var m18=addMonths(d,18), nextYearEnd=new Date(d.getFullYear()+1,11,31), agm=m18<nextYearEnd?m18:nextYearEnd;
-      r.push(['By '+fmt(agm)+', or 6 months after your balance date if earlier','First annual general meeting: none in the year of registration, then within 18 months; read with the rule of one meeting in each calendar year, the earlier date applies','Companies Act, s. 133(1)–(2)']);
-      r.push(['Within 30 working days of that meeting; at the latest '+fmt(addWorkingDays(agm,30)),'First annual return','Companies Act, s. 131(2)']);
+      r.push(['By '+fmt(agm)+', or 6 months after your balance date if earlier','First annual general meeting: none in the year of registration, then within 18 months. Read with the rule of one meeting in each calendar year, the earlier date is shown; how the two rules combine is our reading, the Act has no direct provision.','Companies Act, s. 133(1)–(2)']);
+      r.push(['Within 30 working days of that meeting: about '+fmt(addWorkingDays(agm,30))+' or later with public holidays','First annual return','Companies Act, s. 131(2)']);
       if(arrive) r.push([fmtM(arrive),'You arrive: the bank account is opened in person','Bank’s own rules']);
     }
     r.push(['Within 20 working days of a change','Change of directors or secretary','Companies Act, s. 223']);

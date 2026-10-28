@@ -6,8 +6,8 @@
      Act 38 of 2014, s. 2(2) [Ф-82, Ф-81]
    - the operating company's lease cannot be mortgaged to a licensed bank for five years from signing of the lease,
      Act 38 of 2014, s. 11 [Ф-159а]; execution comes before registration, so the date shown is the latest possible end
-   - any share transfer: form BO 3 within 20 working days; form BO 4 every year with each company's annual return,
-     beneficial ownership regulations 09.10.2026 [Ф-108] */
+   - the Act sets no end date for the six-monthly letters, s. 4(4)(a) [Ф-232]
+   - beneficial ownership: no dates until the official gazette is read */
 (function(){
   var form=document.getElementById('calc'); if(!form) return;
   var out=document.getElementById('sheet-out'), rows=document.getElementById('sheet-rows');
@@ -31,12 +31,14 @@
       row('Six-monthly letter to the Registrar of Lands', 'Once between '+fmt(from)+' and '+fmt(to), 'Act 38 of 2014, s. 4(4)(a)');
     }
     // five years without a bank mortgage [Ф-159а]
+    /* [Ф-232] */
+    row('How long the six-monthly letters continue', 'The Act sets no end date for the six-monthly letters', 'Act 38 of 2014, s. 4(4)(a)');
     row('No bank mortgage of your company\u2019s lease, if the lease is signed on your date', 'Until '+fmt(addMonths(deed,60)), 'Act 38 of 2014, s. 11');
     // twenty years below 50% [Ф-82]
     row('Foreign share stays below 50%', 'Until '+fmt(addMonths(deed,240)), 'Act 38 of 2014, s. 2(2)(a)');
     row('If the foreign share reaches 50%', 'Six months to bring it back below half', 'Act 38 of 2014, s. 2(2), proviso');
     // beneficial ownership [Ф-108]
-    // no beneficial ownership dates until the official gazette is read (root, 29.10)
+    // no beneficial ownership dates until the official gazette is read
     row('Beneficial ownership forms for each company', 'We confirm the current deadlines from the official gazette before we put them in your calendar', 'Official gazette');
     out.hidden=false;
     if(wa) wa.href='https://wa.me/94701698954?text='+encodeURIComponent('Please send me the dates for my land structure. Deed of transfer registered (or planned): '+fmt(deed)+'.');
