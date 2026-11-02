@@ -1,66 +1,41 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<title>Your company’s calendar — Company Sorted</title>
-<meta name="description" content="Your Sri Lankan company’s calendar from one date: the Registrar’s filings and the tax dates, each with the section of the law. Free, in your browser.">
-<link rel="icon" href="img/icon.svg" type="image/svg+xml">
-<link rel="preload" href="fonts/source-serif-4-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/tokens.css">
-<link rel="stylesheet" href="css/site.css">
-<link rel="stylesheet" href="css/calendar.css">
-</head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-
-<header class="bar bar--paper">
-  <a class="bar__logo" href="index.html" aria-label="Company Sorted, home">
-    <img src="img/logo.svg" width="169" height="20" alt="Company Sorted">
-  </a>
-  <nav class="bar__nav" id="menu" aria-label="Sections">
-    <a href="index.html#doors">What we do</a>
-    <a href="index.html#how">How it works</a>
-    <a href="index.html#portal">Client portal</a>
-    <a href="index.html#upkeep">Annual upkeep</a>
-  </nav>
-  <div class="bar__end">
-    <a class="bar__login" href="index.html#portal">Log in</a>
-    <button class="bar__menu" type="button" aria-controls="menu" aria-expanded="false">Menu</button>
-    <a class="btn btn--primary" href="https://wa.me/94701698954">WhatsApp</a>
-  </div>
-</header>
-
-<main id="main">
-  <section class="section cal-page">
-    <div class="wrap">
-      <p class="crumb"><a class="link" href="index.html#doors">What we do</a> &middot; Your company&rsquo;s calendar</p>
-      <h1 class="door-hero__title">Your company&rsquo;s calendar</h1>
-      <p class="lead">Your company&rsquo;s year runs on two calendars: the tax year, the same for every company, and the Registrar&rsquo;s year, which runs from your company&rsquo;s own dates. One date from you sets the second one.</p>
-      <div class="cal-page__tool" data-calendar></div>
-    </div>
-  </section>
-</main>
-
-<footer class="foot">
-  <div class="foot__in">
-    <img class="foot__logo" src="img/logo.svg" width="169" height="20" alt="Company Sorted">
-    <p>World Sorted (Private) Limited, PV 00376250, Sri Lanka &middot; WhatsApp <a class="link" href="https://wa.me/94701698954">+94 70 169 8954</a></p>
-    <p class="foot__doors">
-      <a class="link" href="open-company.html">Opening a company from abroad</a>
-      <a class="link" href="overdue.html">Behind on filings</a>
-      <a class="link" href="accountant.html">Need an accountant who answers</a>
-      <a class="link" href="land.html">Buying land: two companies</a>
-      <a class="link" href="local.html">Starting a business on the island</a>
-    </p>
-    <p>Sources: Companies Act No. 7 of 2007, ss. 131, 133, 144, 150, 223; Inland Revenue Act No. 24 of 2017, ss. 90, 93, 102(1A); Inland Revenue (Amendment) Act No. 11 of 2026, s. 17; IRD tax calendar 2026.</p>
-  </div>
-</footer>
-
-<script src="js/ref.js"></script>
-<script src="js/menu.js"></script>
-<script src="js/calendar.js"></script>
-
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Your company's calendar — Company Sorted</title><style>
+:root{--bg:#f5f7f5;--ink:#142d29;--mut:#64736e;--g:#246e56;--light:#d9eee4;--gold:#eed2a1;--line:#dce3de;--white:#fff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.55}a{text-decoration:none;color:inherit}header{background:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line)}.nav{max-width:1150px;margin:auto;padding:16px 25px;display:flex;justify-content:space-between;align-items:center;gap:15px}.brand{font-weight:900;letter-spacing:-.8px;font-size:21px}.brand small{font-weight:500;color:var(--g);font-size:10px;display:block;letter-spacing:2px}.navlinks{display:flex;align-items:center;gap:24px;font-size:13px}.button{display:inline-flex;align-items:center;justify-content:center;padding:14px 23px;border-radius:9px;background:var(--g);color:#fff;font-weight:700;border:1px solid var(--g);cursor:pointer;transition:.15s}.button:hover{filter:brightness(.88)}.button.alt{background:transparent;color:var(--ink);border:1px solid #adbbb5}.button.light{background:white;color:var(--ink);border-color:white}.hero{background:var(--ink);color:white;overflow:hidden}.container{max-width:1150px;margin:auto;padding:0 25px}.heroGrid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:50px;padding:95px 0}.eyebrow{text-transform:uppercase;font-weight:800;letter-spacing:2px;font-size:11px;color:#add9bf;margin-bottom:23px}.hero h1{font-size:clamp(39px,5vw,65px);line-height:1.08;letter-spacing:-2.3px;margin:0 0 26px}.hero p{font-size:19px;color:#d2e2d9;max-width:590px}.cta{display:flex;gap:11px;flex-wrap:wrap;margin:30px 0 24px}.note{color:#a8c8ba;font-size:12px}.app{background:#fff;border:1px solid #e2ebe6;box-shadow:0 24px 70px #001c1326;border-radius:17px;color:var(--ink);overflow:hidden}.appTop{display:flex;justify-content:space-between;background:#f5f9f6;border-bottom:1px solid #e5ebe7;padding:17px 21px;font-size:13px;font-weight:800}.appBody{padding:26px}.appBadge{display:inline-block;background:#e5f3ea;padding:5px 12px;border-radius:30px;color:#27684c;font-size:12px;font-weight:700}.rowline{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e7ede8;padding:13px 0;gap:12px;font-size:13px}.rowline strong{font-size:12px;text-align:right}.green{color:#20774d}.orange{color:#b47819}.section{padding:87px 0}.section.white{background:white}.kicker{color:var(--g);text-transform:uppercase;font-weight:800;font-size:11px;letter-spacing:2px}.section h2{font-size:clamp(30px,4vw,43px);line-height:1.14;letter-spacing:-1.3px;max-width:850px;margin:12px 0 19px}.lead{font-size:17px;color:#596b63;max-width:820px}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:37px}.card{background:white;border:1px solid var(--line);border-radius:15px;padding:27px}.white .card{background:var(--bg)}.card h3{margin:12px 0;font-size:21px;line-height:1.22}.card p{color:#56665e;font-size:14px}.number{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:9px;background:#dcece2;color:#246e56;font-weight:800}.arrow{color:#398063;font-weight:700;font-size:13px;margin-top:20px}.split{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.steps{counter-reset:step}.step{display:grid;grid-template-columns:44px 1fr;gap:18px;margin:29px 0}.stepnum{background:#dfebdf;width:41px;height:41px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:var(--g)}.step h3{margin:0 0 5px;font-size:18px}.step p{margin:0;color:var(--mut);font-size:14px}.highlight{background:#e2eee7;border-radius:18px;padding:34px}.highlight h3{margin-top:0}.highlight li{margin:13px 0}.planGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px}.plan{border:1px solid var(--line);border-radius:16px;padding:31px;background:white}.plan.feature{border:2px solid var(--g)}.plan .price{font-size:48px;font-weight:850;letter-spacing:-2px;margin:12px 0}.plan .price small{font-size:13px;color:var(--mut);letter-spacing:0;font-weight:500}.plan ul{padding-left:20px;font-size:14px;line-height:2}.tag{background:#deebe3;color:var(--g);padding:5px 11px;border-radius:50px;font-size:11px;font-weight:800}.dark{background:var(--ink);color:white}.dark .lead{color:#c0d5c9}.dark .card{background:#204038;color:#fff;border-color:#3d6354}.dark .card p{color:#c7dacf}.faq details{border-bottom:1px solid var(--line);padding:19px 0}.faq summary{cursor:pointer;font-weight:700;font-size:17px}.faq p{color:#5a6c64;font-size:14px;max-width:850px}.form{background:white;border-radius:16px;padding:30px;color:var(--ink);box-shadow:0 15px 50px #0720191c}.field{display:flex;flex-direction:column;gap:5px;margin:15px 0}.field label{font-size:12px;font-weight:700}.field input,.field select,.field textarea{width:100%;font:inherit;padding:13px;border:1px solid #d7e0db;border-radius:8px;background:#fff}.field textarea{min-height:90px}.foot{padding:38px 0;background:#10241f;color:#c5d8cc;font-size:12px}.footgrid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.pill{font-size:11px;color:#9dc8ae;border:1px solid #507566;border-radius:100px;padding:7px 13px;display:inline-block;margin-top:25px}.muted{color:var(--mut);font-size:12px}.micro{font-size:12px;color:#8da89a}.small{font-size:13px}.dot{color:var(--g);font-weight:800}.banner{background:#dceae0;border:1px solid #c5ded0;padding:20px 25px;border-radius:12px;margin-top:24px}.anchor{scroll-margin-top:90px}@media(max-width:800px){.heroGrid,.split,.three,.planGrid{grid-template-columns:1fr}.heroGrid{padding:65px 0}.hero h1{letter-spacing:-1.3px}.section{padding:65px 0}.navlinks a:not(.button){display:none}.app{max-width:520px}.split{gap:25px}}
+</style><style>.mnu{display:none}
+.waFixed{display:none}
+.app p.muted{color:var(--mut)}
+.foot a,.fine a{text-decoration:underline}
+@media(max-width:800px){body{padding-bottom:68px}
+.brand{white-space:nowrap}
+.button.waFixed{display:flex;position:fixed;left:10px;right:10px;bottom:8px;z-index:30;align-items:center;justify-content:center;width:auto;margin:0}.mnu{display:block;position:relative}
+.mnu summary{list-style:none;cursor:pointer;font-size:13px;font-weight:700;padding:10px 11px;border:1px solid #adbbb5;border-radius:9px;background:#fff;color:#142d29}
+.mnu summary::-webkit-details-marker{display:none}
+.mnu>div{position:absolute;right:0;top:46px;width:230px;background:#fff;color:#142d29;border:1px solid #dce3de;border-radius:15px;box-shadow:0 15px 50px #0720191c;padding:6px 16px;z-index:40}
+.mnu>div a{display:block;padding:12px 0;font-size:14px;border-bottom:1px solid #dce3de;text-decoration:none;color:#142d29}
+.mnu>div a:last-child{border-bottom:0}
+.heroGrid{padding:65px 25px}
+.nav{padding:12px 12px;gap:8px}
+.brand{font-size:17px}.brand small{letter-spacing:1px;white-space:nowrap}
+.navlinks .button{padding:10px 12px;font-size:13px}
+}</style><style>
+/* Классы инструмента из en\js\calendar.js, значения из эталона */
+.calBox{max-width:860px;margin-top:30px}
+.calc__label{display:block;font-size:12px;font-weight:700;margin:15px 0 5px}
+.calc__row{display:flex;gap:11px;flex-wrap:wrap;align-items:center}
+.input{font:inherit;padding:13px;border:1px solid #d7e0db;border-radius:8px;background:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 23px;border-radius:9px;background:var(--g);color:#fff;font:inherit;font-weight:700;border:1px solid var(--g);cursor:pointer}
+.note{color:var(--mut);font-size:13px;margin:12px 0}
+.label{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--g);text-align:left;padding-bottom:8px}
+.cal__opt{padding:11px 16px;border:1px solid #adbbb5;border-radius:9px;background:#fff;color:var(--ink);font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+.cal__opt[aria-pressed="true"]{background:var(--g);color:#fff;border-color:var(--g)}
+.cal__switch{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.cal__out{margin-top:30px}
+.cal__wrap{margin-top:26px;overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}th{font-size:12px;color:var(--mut)}td.muted{color:var(--mut)}
+.cal__line{margin-top:26px}.cal__line{background:#e2eee7;border-radius:18px;padding:24px}
+.actions{margin-top:18px}
+@media(max-width:600px){.cal__table thead{position:absolute;left:-9999px}.cal__table tr{display:block;padding:8px 0;border-bottom:1px solid var(--line)}.cal__table td{display:block;border:0;padding:0}.cal__table td:first-child{font-weight:700}}
+</style></head><body>
+<header><nav class="nav"><a class="brand" href="index.html">COMPANY SORTED<small>PART OF WORLD SORTED</small></a><div class="navlinks"><a href="index.html#doors">Your situation</a><a href="https://wa.me/94701698954?text=Hello.%20I%20have%20a%20question%20about%20my%20company%27s%20calendar.">WhatsApp</a></div></nav></header>
+<main id="top"><section class="section white"><div class="container"><div class="kicker">Free first step</div><h2>Your company's calendar</h2><p class="lead">Your company's year runs on two calendars: the tax year, the same for every company, and the Registrar's year, which runs from your company's own dates. One date from you sets the second one.</p><div class="calBox" data-calendar></div></div></section></main>
+<footer class="foot"><div class="container footgrid"><div><strong>COMPANY SORTED</strong><p>World Sorted (Private) Limited, PV 00376250 · Sri Lanka · WhatsApp +94 70 169 8954</p></div><div>Sources: Companies Act No. 7 of 2007, ss. 131, 133, 144, 150, 223; Inland Revenue Act No. 24 of 2017, ss. 90, 93, 102(1A); Inland Revenue (Amendment) Act No. 11 of 2026, s. 17; IRD tax calendar 2026.</div></div></footer>
+<a class="button waFixed" href="https://wa.me/94701698954?text=Hello.%20I%20have%20a%20question%20about%20my%20company%27s%20calendar.">WhatsApp</a><script src="js/ref.js"></script><script src="js/calendar.js"></script></body></html>
